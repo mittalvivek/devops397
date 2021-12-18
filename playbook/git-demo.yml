@@ -1,0 +1,10 @@
+---
+- hosts: web1
+  tasks:
+    - name: Get files from git repo
+      git: 
+        repo: https://github.com/pathakbhaskar/wedemo.git
+        dest: /var/www/html
+        update: yes
+        force: yes
+      become: true

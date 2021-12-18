@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+    - name: Pring hosts file
+      shell: cat /etc/hosts
+      register: result
+
+    - debug:
+        var: result    
