@@ -1,0 +1,18 @@
+---
+- hosts: 127.0.0.1
+  gather_facts: false
+  tasks:
+    - name: Launch EC2 intance
+      ec2:
+        key_name: "ohio"
+        aws_access_key: "Place_your_AWS_access_key"
+        aws_secret_key: "Place_your_AWS_secret_key"
+        instance_type: "t2.micro"
+        image: "ami-002068ed284fb165b"
+        region: "us-east-2"
+        vpc_subnet_id: "subnet-99f5f1f0"
+        assign_public_ip: yes
+        group: "launch-wizard-1"
+        count: 1
+        wait: true
+

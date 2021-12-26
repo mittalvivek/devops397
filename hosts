@@ -1,8 +1,9 @@
-web1 ansible_host=3.145.77.30 test1=1.1.1.1
-web2 ansible_host=3.145.54.176 ansible_user=ubuntu test2=2.2.2.2
+web1 ansible_host=3.133.114.22 test1=1.1.1.1
+web2 ansible_host=172.31.4.142
+ec2-user@172.31.11.243
+ec2-user@172.31.4.122
 
 [web_servers]
-web1
-web2
+
 [web_servers:vars]
 test3=3.3.3.3
